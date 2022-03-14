@@ -10,19 +10,29 @@ public class PlayerMovement : MonoBehaviour
 
     public HealthBar healthBar;
 
-    public float moveSpeed = 5f;
+    public float moveSpeed;
 
     public Rigidbody2D rb;
 
     public Camera cam;
 
-    Vector2 movement;
+    private Vector2 moveInput;
 
-    Vector2 mousePos;
+    private Vector2 mousePos;
+
+    private float activeMoveSpeed;
+    public float dashSpeed;
+
+    public float dashLength = .5f, dashCooldown = 1f;
+
+    private float dashCounter;
+    private float dashCoolCounter;
 
     // Update is called once per frame
     void Start()
     {
+        activeMoveSpeed = moveSpeed;
+
         currentHealth = maxHealth;
 
         healthBar.SetMaxHealth(maxHealth);
@@ -31,14 +41,40 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-       if (Input.GetKeyDown(KeyCode.Space))
+        //dash system
+
+        moveInput.Normalize();
+
+        rb.velocity = moveInput * activeMoveSpeed;
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            TakeDamage(2);
+            if (dashCoolCounter <= 0 && dashCounter <= 0)
+            {
+                activeMoveSpeed = dashSpeed;
+                dashCounter = dashLength;
+            }
+        }
+
+        if (dashCounter > 0)
+        {
+            dashCounter -= Time.deltaTime;
+
+            if (dashCounter <= 0)
+            {
+                activeMoveSpeed = moveSpeed;
+                dashCoolCounter = dashCooldown;
+            }
+        }
+
+        if (dashCoolCounter > 0)
+        {
+            dashCoolCounter -= Time.deltaTime;
         }
     }
 
@@ -50,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
 
         Vector2 lookDir = mousePos - rb.position;
 
