@@ -5,26 +5,44 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public Slider slider;
 
-    public Gradient gradient;
+    private Slider healthBar;
+    public Image fillImage;
+    public PlayerHealth playerHealth;
 
-    public Image fill;
+    [SerializeField]
+    public Text healthText;
 
-    public void SetMaxHealth(int health)
+
+    // Start is called before the first frame update
+    void Awake()
     {
-
-        slider.maxValue = health;
-
-        slider.value = health;
-
-        fill.color = gradient.Evaluate(1f);
+        healthBar = GetComponent<Slider>();
     }
-    
-    public void SetHealth(int health)
-    {
-        slider.value = health;
 
-        fill.color = gradient.Evaluate(slider.normalizedValue);
+    // Update is called once per frame
+    void Update()
+    {
+        if (healthBar.value <= healthBar.minValue)
+        {
+            fillImage.enabled = false;
+        }
+        if (healthBar.value > healthBar.minValue && !fillImage.enabled)
+        {
+            fillImage.enabled = true;
+        }
+        float fillValue = playerHealth.maxHealth / playerHealth.currentHealth;
+
+        if (fillValue <= healthBar.maxValue / 3)
+        {
+            fillImage.color = Color.red;
+        }
+        else if (fillValue > healthBar.maxValue / 3)
+        {
+            fillImage.color = Color.green;
+        }
+        healthBar.value = fillValue;
+
+        healthText.text = healthBar.value.ToString("0");
     }
 }

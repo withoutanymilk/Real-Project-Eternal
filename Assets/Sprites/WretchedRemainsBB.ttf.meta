@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d49e06da9380c9646af81f002e71bdcd
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Wretched Remains BB
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9d01ec532276c4343a7db080dc34eda4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

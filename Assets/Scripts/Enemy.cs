@@ -6,12 +6,32 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
     private Transform playerPos;
-    private PlayerMovement player;
+    private PlayerHealth player;
+    public float health;
+    public GameObject deathEffect;
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 0.5f);
+        Destroy(gameObject);
+    }
+
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
     }
@@ -30,11 +50,6 @@ public class Enemy : MonoBehaviour
         {
             player.maxHealth--;
             Debug.Log(player.maxHealth);
-        }
-        if (enemy.CompareTag("PlayerBullet"))
-        {
-            Destroy(enemy.gameObject);
-            Destroy(gameObject);
         }
     }
 
