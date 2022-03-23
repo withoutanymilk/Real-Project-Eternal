@@ -44,6 +44,18 @@ public class Shooting : MonoBehaviour
         if (isReloading)
             return;
 
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading)
+        {
+            if(currentAmmo == maxAmmo){
+                return;
+            }
+            else {
+                StartCoroutine(Reload());
+
+                return;
+            }
+        }
+
         if (currentAmmo <= 0f)
         {
             StartCoroutine(Reload());
