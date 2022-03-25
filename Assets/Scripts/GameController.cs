@@ -24,12 +24,12 @@ public class GameController : MonoBehaviour
         enemiesText.text = "Enemies Left: " + numOfEnemies.ToString();
 
         if (numOfEnemies <= 0)
-            Invoke("MainMenu", 1f);
+            NextLevel();
 
     }
 
     private void NextLevel()
-    {
+   {
         SceneManager.LoadScene("MainMenu");
 
     }

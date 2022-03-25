@@ -16,6 +16,7 @@ public class PlayerBullet : MonoBehaviour
 
     }
 
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         Enemy enemy = collision.GetComponent<Enemy>();
@@ -23,7 +24,6 @@ public class PlayerBullet : MonoBehaviour
         {
             enemy.TakeDamage(damage);
         }
-
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, 0.2f);
         Destroy(gameObject);
