@@ -5,32 +5,22 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [Header("health")]
-    public int maxHealth = 100;
-    public int currentHealth;
+    [SerializeField] private float startingHealth = 100f;
+    public float currentHealth;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = startingHealth;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
-        maxHealth -= damage;
+        currentHealth -= damage;
 
-        //healthBar.SetHealth(currentHealth);
+        if (currentHealth <= 0)
+            Destroy(gameObject, 1f);
+            Debug.Log("You' re dead");
+    }
 
-        if (maxHealth <= 0)
-        {
-            Destroy(gameObject);
-            Debug.Log("You're dead");
-        }
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
-    }
 }

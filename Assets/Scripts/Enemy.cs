@@ -48,8 +48,8 @@ public class Enemy : MonoBehaviour
     {
         if (enemy.CompareTag("Player"))
         {
-            player.maxHealth--;
-            Debug.Log(player.maxHealth);
+            player.currentHealth--;
+            Debug.Log(player.currentHealth);
         }
     }
 
