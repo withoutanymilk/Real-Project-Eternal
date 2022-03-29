@@ -9,6 +9,9 @@ public class Enemy : MonoBehaviour
     private PlayerHealth player;
     public float health;
     public GameObject deathEffect;
+    public int amount;
+    public int damage;
+    GameController cont;
 
     public void TakeDamage(int damage)
     {
@@ -22,6 +25,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        cont.AddScore(amount);
         GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 0.5f);
         Destroy(gameObject);
@@ -31,8 +35,10 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        cont = FindObjectOfType<GameController>();
 
     }
 

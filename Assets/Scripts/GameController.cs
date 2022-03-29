@@ -6,8 +6,23 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     [SerializeField]
-    private Text enemiesText;
+    public Text enemiesText;
     int numOfEnemies;
+    public Text scoreText;
+
+    int scores = 0;
+
+    public GameObject gameOverUI;
+
+    public bool gameOver;
+
+    void Start()
+    {
+        scoreText.text = "Scores: " + scores.ToString();
+
+        gameOver = false;
+
+    }
 
     // Start is called before the first frame update
     void Update()
@@ -19,12 +34,20 @@ public class GameController : MonoBehaviour
         {
             NextLevel();
         }
+
+        scoreText.text = "Scores: " + scores.ToString();
+
+    }
+
+    public void AddScore(int amount)
+    {
+        scores += amount;
     }
 
     private void NextLevel()
    {
-        SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
     }
 
 }

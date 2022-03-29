@@ -8,6 +8,8 @@ public class Shooting : MonoBehaviour
 
     public GameObject bulletPreFab;
 
+    public GameObject bulletFlash;
+
     public float bulletForce = 20f;
 
     public float firerate = 15f;
@@ -99,6 +101,7 @@ public class Shooting : MonoBehaviour
         GameObject bullet = Instantiate(bulletPreFab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        GameObject flash = Instantiate(bulletFlash, firePoint.position, firePoint.rotation);
     }
 }
 

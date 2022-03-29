@@ -16,11 +16,25 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        currentHealth -= damage;
 
+            currentHealth -= damage;
+    
+     }
+    public void Update()
+    {
         if (currentHealth <= 0)
-            Destroy(gameObject, 1f);
-            Debug.Log("You' re dead");
+        {
+            currentHealth = 0;
+            GameOver();
+        }
     }
 
-}
+        void GameOver()
+        {
+            FindObjectOfType<GameController>().gameOver = true;
+            FindObjectOfType<GameController>().gameOverUI.SetActive(true);
+            gameObject.SetActive(false);
+            Time.timeScale = 0f;
+        }
+
+    }
