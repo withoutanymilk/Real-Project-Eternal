@@ -17,12 +17,12 @@ public class GameOverScreen : MonoBehaviour
 
     public void RestartButton()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
         SceneManager.LoadScene("Level1");
     }
     public void ExitButton()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
         SceneManager.LoadScene("MainMenu");
     }
 }

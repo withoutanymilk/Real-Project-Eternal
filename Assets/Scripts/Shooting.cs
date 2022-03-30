@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class Shooting : MonoBehaviour
     private bool isReloading = false;
 
     public Animator animator;
+
+    public Text ammoUi;
 
     void Start()
     {
@@ -71,6 +74,8 @@ public class Shooting : MonoBehaviour
             Shoot();
         }
 
+        updateUI();
+
     }
 
     IEnumerator Reload()
@@ -102,6 +107,11 @@ public class Shooting : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
         GameObject flash = Instantiate(bulletFlash, firePoint.position, firePoint.rotation);
+    }
+
+    void updateUI()
+    {
+        ammoUi.text = (currentAmmo + "/" + "Infinite");
     }
 }
 
