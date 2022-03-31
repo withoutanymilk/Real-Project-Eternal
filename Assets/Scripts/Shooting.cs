@@ -111,7 +111,7 @@ public class Shooting : MonoBehaviour
 
     void updateUI()
     {
-        ammoUi.text = (currentAmmo + "/" + "Infinite");
+        ammoUi.text = ("Ammo: " + currentAmmo + "/" + "Infinite");
     }
 }
 

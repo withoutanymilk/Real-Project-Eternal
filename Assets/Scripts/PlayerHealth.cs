@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     [Header("health")]
@@ -31,10 +32,8 @@ public class PlayerHealth : MonoBehaviour
 
         void GameOver()
         {
-            FindObjectOfType<GameController>().gameOver = true;
-            FindObjectOfType<GameController>().gameOverUI.SetActive(true);
-            gameObject.SetActive(false);
-            Time.timeScale = 0f;
+        SceneManager.LoadScene("GameOver");
+        Time.timeScale = 1f;
         }
 
     }

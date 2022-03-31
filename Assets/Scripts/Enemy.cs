@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour
     {
         if (enemy.CompareTag("Player"))
         {
-            player.currentHealth--;
+            player.currentHealth -= damage;
             Debug.Log(player.currentHealth);
         }
     }

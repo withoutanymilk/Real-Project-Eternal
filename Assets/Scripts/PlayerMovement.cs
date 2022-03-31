@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
     }
-       
+
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
