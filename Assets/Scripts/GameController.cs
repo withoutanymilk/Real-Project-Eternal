@@ -16,6 +16,8 @@ public class GameController : MonoBehaviour
 
     public bool gameOver;
 
+    public GameObject completeLevelUI;
+
     void Start()
     {
         scoreText.text = "Scores: " + scores.ToString();
@@ -32,7 +34,7 @@ public class GameController : MonoBehaviour
 
         if (numOfEnemies <= 0)
         {
-            NextLevel();
+            CompleteLevel();
         }
 
         scoreText.text = "Scores: " + scores.ToString();
@@ -45,9 +47,14 @@ public class GameController : MonoBehaviour
     }
 
     private void NextLevel()
-   {
+    {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void CompleteLevel()
+    {
+        SceneManager.LoadScene("LevelComplete");
     }
 
 }

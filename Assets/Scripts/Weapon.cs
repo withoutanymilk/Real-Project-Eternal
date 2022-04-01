@@ -166,6 +166,6 @@ public class Weapon : MonoBehaviour
     }
     void updateUI()
     {
-        ammoUi.text = (ClipAmmo + "/" + MaxAmmo);
+        ammoUi.text = ("Ammo: " + ClipAmmo + "/" + MaxAmmo);
     }
 }

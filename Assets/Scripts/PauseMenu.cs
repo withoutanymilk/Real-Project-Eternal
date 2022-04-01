@@ -30,21 +30,20 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume ()
     {
-        GameIsPause = false;
-        Time.timeScale = 0;
         AudioListener.pause = false;
         pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPause = false;
     }
-    void Pause ()
+    public void Pause ()
     {
-        GameIsPause = true;
-        Time.timeScale = 1;
         AudioListener.pause = true;
         pauseMenuUI.SetActive(true);
+        Time.timeScale = 0;
+        GameIsPause = true;
     }
     public void LoadMenu()
     {
-        Time.timeScale = 0;
         SceneManager.LoadScene("MainMenu");
         Debug.Log("Loading MainMenu...");
     }
