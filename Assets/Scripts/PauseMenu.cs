@@ -30,16 +30,14 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume ()
     {
-        AudioListener.pause = false;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPause = false;
     }
     public void Pause ()
     {
-        AudioListener.pause = true;
         pauseMenuUI.SetActive(true);
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
         GameIsPause = true;
     }
     public void LoadMenu()
