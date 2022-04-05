@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour
     [Header("health")]
     [SerializeField] private float startingHealth = 100f;
     public float currentHealth;
+    public bool invulnerable = false;
+    public float invulTime = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,9 +19,11 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-
+        if (!invulnerable)
+        {
             currentHealth -= damage;
-    
+            StartCoroutine(JustHurt());
+        }   
      }
     public void Update()
     {
@@ -28,6 +32,12 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = 0;
             GameOver();
         }
+    }
+    IEnumerator JustHurt()
+    {
+        invulnerable = true;
+        yield return new WaitForSeconds(invulTime);
+        invulnerable = false;
     }
 
         void GameOver()
