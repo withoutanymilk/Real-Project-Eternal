@@ -40,10 +40,22 @@ public class PlayerHealth : MonoBehaviour
         invulnerable = false;
     }
 
-        void GameOver()
-        {
+    void GameOver()
+    {
         SceneManager.LoadScene("GameOver");
         Time.timeScale = 1f;
-        }
-
     }
+
+	
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		Debug.Log("OnTriggerEnter2D " + collision.gameObject.name + " " + this.name);
+		
+		if (collision.gameObject.CompareTag("PowerupHealth") && (currentHealth < 100))		//Triggers if the player collides with object with tag "PowerupHealth", they regain health.
+		{
+			Destroy(collision.gameObject);	
+			TakeDamage(-15);			
+		}
+
+	}
+}
