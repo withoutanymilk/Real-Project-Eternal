@@ -17,6 +17,8 @@ public class GameController : MonoBehaviour
     public bool gameOver;
 
     public GameObject completeLevelUI;
+    
+    public bool completeLevel;
 
     void Start()
     {
@@ -46,15 +48,17 @@ public class GameController : MonoBehaviour
         scores += amount;
     }
 
-    private void NextLevel()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
-    }
+    //private void NextLevel()
+    //{
+   //     Time.timeScale = 1f;
+    //    SceneManager.LoadScene("MainMenu");
+   // }
 
     public void CompleteLevel()
     {
-        SceneManager.LoadScene("LevelComplete");
+        completeLevel = true;
+        completeLevelUI.SetActive(true);
+        Time.timeScale = 1f;
     }
 
 }

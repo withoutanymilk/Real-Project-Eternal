@@ -10,11 +10,20 @@ public class PlayerHealth : MonoBehaviour
     public float currentHealth;
     public bool invulnerable = false;
     public float invulTime = 1f;
+   
+    public GameObject gameOverUI;
+
+    public bool gameOver;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = startingHealth;
+    }
+
+    void Awake()
+    {
+        gameOver = false;
     }
 
     public void TakeDamage(float damage)
@@ -42,7 +51,8 @@ public class PlayerHealth : MonoBehaviour
 
     void GameOver()
     {
-        SceneManager.LoadScene("GameOver");
+        gameOver = true;
+        gameOverUI.SetActive(true);
         Time.timeScale = 1f;
     }
 

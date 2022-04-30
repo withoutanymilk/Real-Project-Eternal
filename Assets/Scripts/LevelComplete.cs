@@ -9,7 +9,7 @@ public class LevelComplete : MonoBehaviour
     public void RestartButton()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void ExitButton()
     {
