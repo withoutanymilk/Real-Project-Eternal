@@ -132,6 +132,8 @@ public class ShotGun : MonoBehaviour
             else
             {
                 Debug.Log("not enough bullets to reload");
+                FindObjectOfType<AudioManager>().Play("NoAmmo");
+
             }
 
         }

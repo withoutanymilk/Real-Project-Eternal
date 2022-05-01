@@ -130,6 +130,8 @@ public class AssualtRifle : MonoBehaviour
             else
             {
                 Debug.Log("not enough bullets to reload");
+                FindObjectOfType<AudioManager>().Play("NoAmmo");
+
             }
 
         }

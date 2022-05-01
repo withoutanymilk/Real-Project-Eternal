@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            FindObjectOfType<AudioManager>().Play("Death");
         }
     }
 
