@@ -156,7 +156,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -697763020151794088, guid: 9f969f5e3e06d1249a16f6704245d09b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -226,7 +226,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  maxHealth: 0
   health: 20
   deathEffect: {fileID: 9046645315827286523, guid: 6aae23d9ec7341b41a41969cf720df42, type: 3}
   amount: 50
   damage: 5
+  healthImage: {fileID: 0}
