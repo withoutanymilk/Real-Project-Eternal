@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        cont.AddScore(amount);
+        //cont.AddScore(amount);
         GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 0.5f);
         Destroy(gameObject);

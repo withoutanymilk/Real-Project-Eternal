@@ -24,6 +24,11 @@ public class PlayerBullet : MonoBehaviour
         {
             enemy.TakeDamage(damage);
         }
+        TotalBossAi boss = collision.GetComponent<TotalBossAi>();
+        if (boss != null)
+        {
+            boss.TakeDamage(damage);
+        }
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, 0.2f);
         Destroy(gameObject);
