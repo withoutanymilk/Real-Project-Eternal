@@ -9,6 +9,7 @@ TagManager:
   - PowerupHealth
   - PowerupSpeed
   - PowerupDamage
+  - walker
   layers:
   - Default
   - TransparentFX
