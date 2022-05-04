@@ -10,18 +10,20 @@ public class BossWalk : MonoBehaviour
     public float speed;
     public float nextWaypointDistance = 3f;
     public Transform BossGFX;
+    public Rigidbody2D rb;
 
-    Path path;
+
+
     int cPoint = 0;
     bool reachedEnd = false;
 
-    public Rigidbody2D rb;
+    Path path;
     Seeker seeker;
     // Start is called before the first frame update
     void Start()
     {
         seeker = GetComponent<Seeker>();
-        InvokeRepeating("UpdatePath", 0f, 1f);
+        InvokeRepeating("UpdatePath", 0f, .25f);
         seeker.StartPath(rb.position, target.position, OnPathComplete);
     }
 
@@ -45,11 +47,11 @@ public class BossWalk : MonoBehaviour
     {
         if (path == null)
             return;
-
-        if(cPoint >= path.vectorPath.Count)
+        
+        if (cPoint >= path.vectorPath.Count)
         {
             reachedEnd = true;
-            anime.SetTrigger("Attack");
+            //anime.SetTrigger("Attack");
             return;
         } else
         {
@@ -62,7 +64,7 @@ public class BossWalk : MonoBehaviour
         rb.AddForce(force);
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[cPoint]);
-
+        
         if (distance < nextWaypointDistance)
         {
             cPoint++;
@@ -77,6 +79,5 @@ public class BossWalk : MonoBehaviour
         {
             BossGFX.localScale = new Vector3(1f, 1f, 1f);
         }
-
     }
 }

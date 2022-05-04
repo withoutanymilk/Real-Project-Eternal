@@ -13,12 +13,6 @@ public class PortalSpawn : MonoBehaviour
     public int spawnNum=5;
     public int enemiesLeft;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-   
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -35,17 +29,9 @@ public class PortalSpawn : MonoBehaviour
             timeBtwSpawns -= Time.deltaTime;
         }
 
-        if(spawnNum <=0 && enemiesLeft == 0)
+        if(spawnNum <=0 && enemiesLeft == 1)
         {
             anime.SetTrigger("Intro2End");
-            StartCoroutine(endthis(1.7f));
         }
-    }
-
-    private IEnumerator endthis(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        Debug.Log("TEST");
-        p.SetActive(false);
     }
 }
