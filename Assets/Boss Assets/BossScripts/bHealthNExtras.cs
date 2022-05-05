@@ -7,7 +7,7 @@ public class bHealthNExtras : MonoBehaviour
     //animation
     public Animator anime;
     //Health stuffs
-    public int cHealth = 0;
+    public int cHealth = 1;
     public int maxHealth;
     //Attacking things
     public Transform attackPoint1;
@@ -18,13 +18,18 @@ public class bHealthNExtras : MonoBehaviour
     public int attackDamage = 30;
     //walking things
     public GameObject walker;
-    private bool pToggle = false;
     //portal things
+    private bool pToggle = false;
     public GameObject portal;
+    public GameObject portal2;
     //boss hit box
     private bool bTog = true;
     //Stage things
     private bool i2 = true;
+    private bool i3 = true;
+    private bool d4 = true;
+    //death
+    public GameObject deathEffect;
 
 
 
@@ -51,24 +56,27 @@ public class bHealthNExtras : MonoBehaviour
             {
                 anime.SetTrigger("Intro2");
                 i2 = false;
-                attackDamage = 60;
+                attackDamage = 45;
             }
             else
                 return;
         }
-        else if (cHealth <= (maxHealth / 3))
+        else if (cHealth <= (maxHealth / 3) && cHealth > 0)
         {
-            /*isStage1 = false;
-            isStage2 = false;
-            isStage3 = true;*/
-
+            if (i3)
+            {
+                anime.SetTrigger("Intro3");
+                i3 = false;
+                attackDamage = 55;
+            }
+            else
+                return;
         }
-        if (cHealth <= 0)
+        else if (cHealth <= 0)
         {
-            /*isStage1 = false;
-            isStage2 = false;
-            isStage3 = false;
-            DeadState();*/
+            Debug.Log("BOSS DEAD");
+            anime.SetTrigger("Die");
+                
         }
         return;
     }
@@ -134,6 +142,12 @@ public class bHealthNExtras : MonoBehaviour
         portal.SetActive(pToggle);
         return;
     }
+    public void port2Tog() //toggles bPortal on and off
+    {
+        pToggle = !pToggle;
+        portal2.SetActive(pToggle);
+        return;
+    }
 
     public void bcollideTog() //Toggles bhitbox 
     {
@@ -152,6 +166,10 @@ public class bHealthNExtras : MonoBehaviour
         walker.GetComponent<BossWalk>().speed = 6999999f;
     }
 
+    public void soulGo()
+    {
+        GameObject effect = Instantiate(deathEffect, portal2.transform.position, Quaternion.identity);
+    }
 
     void OnDrawGizmosSelected()
     {

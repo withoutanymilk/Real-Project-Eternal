@@ -14,6 +14,7 @@ public class EnemyPspwn : MonoBehaviour
     public Image healthImage;
     int cPoint = 0;
     bool reachedEnd = false;
+    public float moveT;
 
     private PlayerHealth player;
     Transform target;
@@ -51,7 +52,7 @@ public class EnemyPspwn : MonoBehaviour
         target = GameObject.FindWithTag("Player").transform;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
-        InvokeRepeating("UpdatePath", 0f, 1.5f);
+        InvokeRepeating("UpdatePath", 0f, moveT);
         seeker.StartPath(rb.position, target.position, OnPathComplete);
     }
 
