@@ -132,6 +132,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -964,6 +965,43 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      23: -4635813174228090485
+      small_worm_14: 1487251844293513903
+      small_worm_9: 713693387347097722
+      19: -213685623167377778
+      small_worm_31: 9174179694954787986
+      small_worm_35: -2477799771170712841
+      small_worm_10: 6619330511627506027
+      small_worm_5: 2236143811760210195
+      small_worm_17: 5725840632282378149
+      small_worm_32: -4773049194203034182
+      small_worm_34: 4548695109741285365
+      small_worm_1: 1873588987517449444
+      18: 8926770614416700655
+      small_worm_7: -2381956676186226929
+      small_worm_8: 5315122482703788366
+      small_worm_30: 287272410026594164
+      small_worm_13: 8048199545514148838
+      small_worm_33: 6475608853508874709
+      20: 985087838166257578
+      21: -8246546489861720550
+      26: 6061669208956661420
+      small_worm_3: -7151869264383091667
+      small_worm_0: 3046128777859555289
+      22: -3629919199350924829
+      24: -5340318234430717475
+      small_worm_4: 4454976191692178358
+      small_worm_2: 6475428226038459301
+      small_worm_28: -7964327401855949681
+      small_worm_6: -2361238038854912372
+      small_worm_12: 2578777453769124552
+      small_worm_16: 6590019677743013348
+      small_worm_15: 8330020374696124500
+      small_worm_27: -4445550992295630352
+      small_worm_11: -948037184618488396
+      25: -7744363720958801250
+      small_worm_29: -5215893828457146622
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

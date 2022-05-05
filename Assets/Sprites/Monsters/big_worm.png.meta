@@ -96,6 +96,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -676,6 +677,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      big_worm_17: 63368523214546434
+      big_worm_9: 4849967680635931130
+      big_worm_5: 4676257000640263088
+      big_worm_8: -2029590176979818193
+      big_worm_10: -2476849790339031053
+      big_worm_0: -950362210121354670
+      big_worm_13: 3547489210986644518
+      big_worm_2: -4280250044909933443
+      big_worm_6: -1605999779621927299
+      big_worm_21: -6809773341508663655
+      big_worm_22: 2783349962239989572
+      big_worm_4: 1394709558762811473
+      big_worm_12: 750275764831707113
+      big_worm_19: -7806848566051690849
+      big_worm_14: 2712154468036786232
+      big_worm_20: 1649075170831291147
+      big_worm_3: 259287887606321006
+      big_worm_15: 2631897861776315637
+      big_worm_23: 5980094543130121909
+      big_worm_7: 4728774999393596502
+      big_worm_11: 7824663952050467694
+      big_worm_16: 7353460691334107115
+      big_worm_1: 4299493998306591871
+      big_worm_18: 7767588036367303224
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
