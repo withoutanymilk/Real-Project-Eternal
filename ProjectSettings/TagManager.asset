@@ -9,6 +9,8 @@ TagManager:
   - PowerupHealth
   - PowerupSpeed
   - PowerupDamage
+  - walker
+  - pEnemy
   layers:
   - Default
   - TransparentFX

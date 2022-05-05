@@ -57,7 +57,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
 	
-	private void OnTriggerEnter2D(Collider2D collision)
+	/*private void OnTriggerEnter2D(Collider2D collision)
 	{
 		Debug.Log("OnTriggerEnter2D " + collision.gameObject.name + " " + this.name);
 		
@@ -67,5 +67,5 @@ public class PlayerHealth : MonoBehaviour
 			TakeDamage(-15);			
 		}
 
-	}
+	}*/
 }
