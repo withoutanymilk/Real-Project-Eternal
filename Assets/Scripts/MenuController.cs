@@ -46,6 +46,9 @@ public class MenuController : MonoBehaviour
     public TMP_Dropdown resolutionDropdown;
     private Resolution[] resolutions;
 
+    [Header("Menu Button")]
+    [SerializeField] private Button loadGameButton;
+
     private void Start()
     {
         resolutions = Screen.resolutions;
@@ -69,6 +72,10 @@ public class MenuController : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+        if (!DataPersistenceManager.instance.HasGameData()) 
+        {
+            loadGameButton.interactable = false;
+        }
     }
 
     public void SetResolution(int resolutionIndex)
@@ -79,26 +86,25 @@ public class MenuController : MonoBehaviour
 
     public void NewGameDialogYes()
     {
-        SceneManager.LoadScene(_newGameLevel);
+        DataPersistenceManager.instance.NewGame();
+        SceneManager.LoadScene("Level1");
     }
 
     public void LoadGameDialogYes()
     {
-        if (PlayerPrefs.HasKey("SavedLevel"))
+        if(PlayerPrefs.GetInt("LoadSave") == 1)
         {
-            levelToLoad = PlayerPrefs.GetString("SavedLevel");
-            //PlayerPrefs.Setstring("SavedLevel", whateveryourlevelis);
-            SceneManager.LoadScene(levelToLoad);
-        }
-        else
-        {
-            noSavedGameDialog.SetActive(true);
+            SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
         }
     }
 
     public void ExitButton()
     {
         Application.Quit();
+    }
+    private void DisableMenuButtons()
+    {
+        loadGameButton.interactable = false;
     }
 
     public void SetVolume(float volume)
