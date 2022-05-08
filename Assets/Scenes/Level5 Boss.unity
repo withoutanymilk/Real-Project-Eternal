@@ -1007,10 +1007,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6023925224024298741, guid: 547f31a13823e294dab286ddfcc71d10, type: 3}
+      propertyPath: graphMask.value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6023925224024298743, guid: 547f31a13823e294dab286ddfcc71d10, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 6023925224024298764, guid: 547f31a13823e294dab286ddfcc71d10, type: 3}
       propertyPath: m_Name
       value: Ghost
@@ -2322,7 +2326,7 @@ PrefabInstance:
     - target: {fileID: 1306761146349982937, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 1306761146349982948, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -2374,6 +2378,10 @@ PrefabInstance:
     - target: {fileID: 1306761146349982949, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306761146349982950, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
+      propertyPath: graphMask.value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
@@ -11297,6 +11305,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8025260259002475916, guid: 7d61393bd4531fb4ea839ef26b0edf42, type: 3}
+      propertyPath: graphMask.value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8025260259002475918, guid: 7d61393bd4531fb4ea839ef26b0edf42, type: 3}
       propertyPath: healthImage
       value: 
@@ -11304,7 +11316,7 @@ PrefabInstance:
     - target: {fileID: 8025260259002475919, guid: 7d61393bd4531fb4ea839ef26b0edf42, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d61393bd4531fb4ea839ef26b0edf42, type: 3}
 --- !u!1 &477604024
@@ -11397,7 +11409,7 @@ PrefabInstance:
     - target: {fileID: 1306761146349982937, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 1306761146349982948, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -11449,6 +11461,10 @@ PrefabInstance:
     - target: {fileID: 1306761146349982949, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306761146349982950, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
+      propertyPath: graphMask.value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
@@ -19829,7 +19845,7 @@ PrefabInstance:
     - target: {fileID: 1306761146349982937, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 1306761146349982948, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -19881,6 +19897,10 @@ PrefabInstance:
     - target: {fileID: 1306761146349982949, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306761146349982950, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
+      propertyPath: graphMask.value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
@@ -20177,10 +20197,14 @@ PrefabInstance:
     - target: {fileID: 658746794, guid: 3566ba8cae756c04f988bfaa213c7e4d, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 658746795, guid: 3566ba8cae756c04f988bfaa213c7e4d, type: 3}
       propertyPath: maxSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 658746796, guid: 3566ba8cae756c04f988bfaa213c7e4d, type: 3}
+      propertyPath: graphMask.value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 998372190, guid: 3566ba8cae756c04f988bfaa213c7e4d, type: 3}
       propertyPath: m_Layer
@@ -20626,7 +20650,7 @@ PrefabInstance:
     - target: {fileID: 1306761146349982937, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 1306761146349982948, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -20677,6 +20701,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1306761146349982949, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306761146349982950, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
+      propertyPath: graphMask.value
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -21381,10 +21409,14 @@ PrefabInstance:
     - target: {fileID: 658746794, guid: 3566ba8cae756c04f988bfaa213c7e4d, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 658746795, guid: 3566ba8cae756c04f988bfaa213c7e4d, type: 3}
       propertyPath: maxSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 658746796, guid: 3566ba8cae756c04f988bfaa213c7e4d, type: 3}
+      propertyPath: graphMask.value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 998372190, guid: 3566ba8cae756c04f988bfaa213c7e4d, type: 3}
       propertyPath: m_Layer
@@ -21511,10 +21543,14 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6023925224024298741, guid: 547f31a13823e294dab286ddfcc71d10, type: 3}
+      propertyPath: graphMask.value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6023925224024298743, guid: 547f31a13823e294dab286ddfcc71d10, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 6023925224024298764, guid: 547f31a13823e294dab286ddfcc71d10, type: 3}
       propertyPath: m_Name
       value: Ghost (2)
@@ -29132,7 +29168,7 @@ PrefabInstance:
     - target: {fileID: 1306761146349982937, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 1306761146349982941, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -29188,6 +29224,10 @@ PrefabInstance:
     - target: {fileID: 1306761146349982949, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306761146349982950, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
+      propertyPath: graphMask.value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
@@ -29414,10 +29454,14 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6023925224024298741, guid: 547f31a13823e294dab286ddfcc71d10, type: 3}
+      propertyPath: graphMask.value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6023925224024298743, guid: 547f31a13823e294dab286ddfcc71d10, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 6023925224024298764, guid: 547f31a13823e294dab286ddfcc71d10, type: 3}
       propertyPath: m_Name
       value: Ghost (3)
@@ -30256,7 +30300,11 @@ PrefabInstance:
     - target: {fileID: 658746794, guid: 3566ba8cae756c04f988bfaa213c7e4d, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
+    - target: {fileID: 658746796, guid: 3566ba8cae756c04f988bfaa213c7e4d, type: 3}
+      propertyPath: graphMask.value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 998372190, guid: 3566ba8cae756c04f988bfaa213c7e4d, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -30382,7 +30430,7 @@ PrefabInstance:
     - target: {fileID: 1306761146349982937, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 1306761146349982948, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -30435,6 +30483,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1306761146349982950, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
+      propertyPath: graphMask.value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
 --- !u!1001 &1132689904
@@ -30447,7 +30499,7 @@ PrefabInstance:
     - target: {fileID: 1306761146349982937, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 1306761146349982948, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -30498,6 +30550,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1306761146349982949, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306761146349982950, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
+      propertyPath: graphMask.value
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -31102,7 +31158,7 @@ PrefabInstance:
     - target: {fileID: 1306761146349982937, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 262589104}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 1306761146349982948, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -31155,6 +31211,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1306761146349982950, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
+      propertyPath: graphMask.value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
 --- !u!4 &1224826273 stripped
@@ -31172,7 +31232,11 @@ PrefabInstance:
     - target: {fileID: 658746794, guid: 3566ba8cae756c04f988bfaa213c7e4d, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
+    - target: {fileID: 658746796, guid: 3566ba8cae756c04f988bfaa213c7e4d, type: 3}
+      propertyPath: graphMask.value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 664030130594253693, guid: 3566ba8cae756c04f988bfaa213c7e4d, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -146162,10 +146226,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1673655949}
     m_Modifications:
+    - target: {fileID: 4477305669328965302, guid: 84ecb1269fcb6584c8f9d38d0f9f377f, type: 3}
+      propertyPath: graphMask.value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4477305669328965303, guid: 84ecb1269fcb6584c8f9d38d0f9f377f, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 4477305669328965304, guid: 84ecb1269fcb6584c8f9d38d0f9f377f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -146370,6 +146438,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5262472506290629245, guid: eb69cf8e4bd6a0849b97cce2602e3026, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262472506290629246, guid: eb69cf8e4bd6a0849b97cce2602e3026, type: 3}
+      propertyPath: graphMask.value
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -146593,10 +146665,14 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6023925224024298741, guid: 547f31a13823e294dab286ddfcc71d10, type: 3}
+      propertyPath: graphMask.value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6023925224024298743, guid: 547f31a13823e294dab286ddfcc71d10, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 6023925224024298764, guid: 547f31a13823e294dab286ddfcc71d10, type: 3}
       propertyPath: m_Name
       value: Ghost (1)
@@ -146709,7 +146785,7 @@ PrefabInstance:
     - target: {fileID: 1306761146349982937, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 1306761146349982948, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -146760,6 +146836,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1306761146349982949, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306761146349982950, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
+      propertyPath: graphMask.value
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -147132,7 +147212,7 @@ PrefabInstance:
     - target: {fileID: 1306761146349982937, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1288757615}
+      objectReference: {fileID: 1603336712}
     - target: {fileID: 1306761146349982948, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -147184,6 +147264,10 @@ PrefabInstance:
     - target: {fileID: 1306761146349982949, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306761146349982950, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
+      propertyPath: graphMask.value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e405896d27bb9984c913c73af2cf1bfd, type: 3}
