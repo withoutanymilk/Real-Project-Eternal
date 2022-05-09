@@ -427,6 +427,7 @@ MonoBehaviour:
   invulTime: 1
   gameOverUI: {fileID: 0}
   gameOver: 0
+  WeaponHolder: {fileID: 0}
 --- !u!114 &61409906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1565,6 +1566,7 @@ MonoBehaviour:
   invulTime: 1
   gameOverUI: {fileID: 0}
   gameOver: 0
+  WeaponHolder: {fileID: 0}
 --- !u!114 &202590037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3545,6 +3547,7 @@ MonoBehaviour:
   gameOver: 0
   completeLevelUI: {fileID: 154646655}
   completeLevel: 0
+  WeaponHolder: {fileID: 1948160080}
 --- !u!4 &447041616
 Transform:
   m_ObjectHideFlags: 0
@@ -12099,6 +12102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 657484494}
+  WeaponHolder: {fileID: 1948160080}
 --- !u!114 &554999782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31626,6 +31630,7 @@ MonoBehaviour:
   invulTime: 1
   gameOverUI: {fileID: 0}
   gameOver: 0
+  WeaponHolder: {fileID: 0}
 --- !u!114 &1288757611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89597,6 +89602,7 @@ MonoBehaviour:
   invulTime: 1
   gameOverUI: {fileID: 949380880}
   gameOver: 0
+  WeaponHolder: {fileID: 1948160080}
 --- !u!61 &1603336709
 BoxCollider2D:
   m_ObjectHideFlags: 0

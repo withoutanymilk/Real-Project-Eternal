@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
     public GameObject completeLevelUI;
     
     public bool completeLevel;
-
+    public GameObject WeaponHolder;
     void Start()
     {
         scoreText.text = "Scores: " + scores.ToString();
@@ -59,6 +59,7 @@ public class GameController : MonoBehaviour
         completeLevel = true;
         completeLevelUI.SetActive(true);
         Time.timeScale = 1f;
+        WeaponHolder.SetActive(false);
     }
 
 }

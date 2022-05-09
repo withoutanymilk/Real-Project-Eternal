@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject gameOverUI;
 
     public bool gameOver;
+    public GameObject WeaponHolder;
 
     // Start is called before the first frame update
     void Start()
@@ -51,9 +52,11 @@ public class PlayerHealth : MonoBehaviour
 
     void GameOver()
     {
+
         gameOver = true;
         gameOverUI.SetActive(true);
         Time.timeScale = 1f;
+        WeaponHolder.SetActive(false);
     }
 
 	
